@@ -179,8 +179,6 @@ body {
   background-color: #fce4ec;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
-  padding: 20px;
-  text-align: center;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   cursor: pointer;
 }
@@ -191,10 +189,21 @@ body {
 }
 
 .categoria-card a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  height: 100%;
+  width: 100%;
   text-decoration: none;
   color: #c2185b;
   font-weight: bold;
-  display: block;
+}
+
+.categoria-card a:hover {
+  background-color: rgba(233, 30, 99, 0.05);
+  border-radius: 8px;
 }
 
 .categoria-card i {
@@ -203,29 +212,3 @@ body {
   color: #e91e63;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-  .menu-fixo {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .menu-fixo ul {
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
-  }
-
-  .fornecedores {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card {
-    width: 90%;
-  }
-
-  .categorias-grid {
-    grid-template-columns: 1fr;
-  }
-}
