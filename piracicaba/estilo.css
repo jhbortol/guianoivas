@@ -165,31 +165,7 @@ body {
   text-decoration: underline;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-  .menu-fixo {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .menu-fixo ul {
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
-  }
-
-  .fornecedores {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card {
-    width: 90%;
-  }
-  /* Seção de categorias */
-
-
-}
+/* Seção de categorias com cards */
 .categorias-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -225,4 +201,31 @@ body {
   font-size: 28px;
   margin-bottom: 10px;
   color: #e91e63;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .menu-fixo {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-fixo ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .fornecedores {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .categorias-grid {
+    grid-template-columns: 1fr;
+  }
 }
