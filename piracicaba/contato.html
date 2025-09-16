@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Guia Noivas Piracicaba - Fornecedores de Casamento</title>
-  <meta name="description" content="Encontre os melhores fornecedores de casamento em Piracicaba. Buffet, decoração, música, vestidos e muito mais em um só lugar.">
+  <title>Contato - Guia Noivas Piracicaba</title>
+  <meta name="description" content="Entre em contato com o Guia Noivas Piracicaba para dúvidas, parcerias ou cadastro de fornecedores.">
   <link rel="stylesheet" href="/piracicaba/estilo.css">
 </head>
 <body>
@@ -23,35 +23,33 @@
     </ul>
   </nav>
 
-  <!-- Hero -->
+  <!-- Cabeçalho -->
   <header class="hero">
-    <h1>Bem-vindo ao Guia Noivas Piracicaba</h1>
-    <p>O seu catálogo completo de fornecedores para casamento na região</p>
+    <h1>Fale Conosco</h1>
+    <p>Estamos prontos para ajudar você</p>
   </header>
 
-  <!-- Destaque de categorias -->
-  <section class="categorias-destaque">
-    <h2>Explore por categoria</h2>
-    <div class="grid-categorias">
-      <a href="/piracicaba/buffet.html">🍽 Buffet</a>
-      <a href="/piracicaba/decoracao.html">🎀 Decoração</a>
-      <a href="/piracicaba/musica.html">🎶 Música</a>
-      <a href="/piracicaba/espacos.html">🏛 Espaços</a>
-      <a href="/piracicaba/vestidos.html">👗 Vestidos</a>
-      <a href="/piracicaba/convites.html">✉️ Convites</a>
-      <a href="/piracicaba/beleza.html">💄 Beleza</a>
-      <a href="/piracicaba/filmagem.html">🎥 Filmagem</a>
-      <a href="/piracicaba/lembrancinhas.html">🎁 Lembrancinhas</a>
-      <a href="/piracicaba/cerimonial.html">📋 Cerimonial</a>
-      <a href="/piracicaba/doces-finos.html">🍬 Doces Finos</a>
-      <a href="/piracicaba/outros-servicos.html">✨ Outros Serviços</a>
-    </div>
+  <!-- Formulário de contato -->
+  <section class="intro">
+    <p>Preencha o formulário abaixo para enviar sua mensagem. Responderemos o mais breve possível.</p>
+    <form action="/piracicaba/enviar-contato.php" method="post" style="max-width:600px;margin:auto;">
+      <label for="nome">Nome:</label><br>
+      <input type="text" id="nome" name="nome" required style="width:100%;padding:8px;margin-bottom:10px;"><br>
+
+      <label for="email">E-mail:</label><br>
+      <input type="email" id="email" name="email" required style="width:100%;padding:8px;margin-bottom:10px;"><br>
+
+      <label for="mensagem">Mensagem:</label><br>
+      <textarea id="mensagem" name="mensagem" rows="5" required style="width:100%;padding:8px;margin-bottom:10px;"></textarea><br>
+
+      <button type="submit" style="padding:10px 20px;background:#e91e63;color:white;border:none;border-radius:4px;cursor:pointer;">Enviar</button>
+    </form>
   </section>
 
-  <!-- Chamada para fornecedores -->
+  <!-- Chamada para cadastro -->
   <section class="cta-cadastro">
-    <h2>É fornecedor de casamento?</h2>
-    <p>Cadastre-se gratuitamente e divulgue seus serviços para centenas de noivos da região.</p>
+    <h2>Quer divulgar seus serviços?</h2>
+    <p>Cadastre-se e alcance centenas de noivos que procuram fornecedores na região.</p>
     <a href="/piracicaba/cadastro.html" class="botao">Quero me cadastrar</a>
   </section>
 
