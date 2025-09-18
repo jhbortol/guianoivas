@@ -1,72 +1,88 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contato - Guia Noivas Piracicaba</title>
-  <meta name="description" content="Entre em contato com o Guia Noivas Piracicaba para dúvidas, parcerias ou cadastro de fornecedores.">
-  <link rel="stylesheet" href="/piracicaba/estilo.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Guia Noivas Piracicaba</title>
+    <meta name="description" content="Entre em contato com o Guia Noivas Piracicaba para dúvidas, sugestões ou parcerias.">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400&display=swap">
 </head>
 <body>
 
-  <!-- Menu fixo -->
-  <nav class="menu-fixo">
-    <div class="logo">
-      <a href="/piracicaba/index.html">💍 Guia Noivas Piracicaba</a>
-    </div>
-    <ul>
-      <li><a href="/piracicaba/index.html">Início</a></li>
-      <li><a href="/piracicaba/categorias.html">Categorias</a></li>
-      <li><a href="/piracicaba/sobre.html">Sobre</a></li>
-      <li><a href="/piracicaba/cadastro.html">Cadastro</a></li>
-      <li><a href="/piracicaba/contato.html">Contato</a></li>
-    </ul>
-  </nav>
+    <nav class="menu-principal">
+        <div class="logo">
+            <a href="index.html">
+                <img src="imagens/logo.png" alt="Guia Noivas Piracicaba Logo">
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="categorias.html">Categorias</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="cadastro.html">Cadastro</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
 
-  <!-- Cabeçalho -->
-  <header class="hero">
-    <h1>Fale Conosco</h1>
-    <p>Estamos prontos para ajudar você</p>
-  </header>
+    <header class="page-header" style="background-image: url('imagens/contato-hero.jpg');">
+        <div class="page-header-overlay">
+            <h1>Fale Conosco</h1>
+            <p>Estamos aqui para ajudar! Envie sua mensagem.</p>
+        </div>
+    </header>
 
-  <!-- Formulário de contato -->
-  <section class="intro">
-    <p>Preencha o formulário abaixo para enviar sua mensagem. Responderemos o mais breve possível.</p>
-    <form action="/piracicaba/enviar-contato.php" method="post" style="max-width:600px;margin:auto;">
-      <label for="nome">Nome:</label><br>
-      <input type="text" id="nome" name="nome" required style="width:100%;padding:8px;margin-bottom:10px;"><br>
+    <section class="conteudo-contato">
+        <div class="container">
+            <div class="contato-info">
+                <h2>Envie sua Mensagem</h2>
+                <form class="form-contato">
+                    <div class="form-grupo">
+                        <label for="nome">Nome Completo:</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+                    <div class="form-grupo">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-grupo">
+                        <label for="assunto">Assunto:</label>
+                        <input type="text" id="assunto" name="assunto" required>
+                    </div>
+                    <div class="form-grupo">
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea id="mensagem" name="mensagem" rows="6" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Enviar Mensagem</button>
+                </form>
+            </div>
 
-      <label for="email">E-mail:</label><br>
-      <input type="email" id="email" name="email" required style="width:100%;padding:8px;margin-bottom:10px;"><br>
+            <div class="contato-detalhes">
+                <h2>Outras Formas de Contato</h2>
+                <p>Se preferir, entre em contato pelos canais abaixo:</p>
+                <ul>
+                    <li><strong>E-mail:</strong> <a href="mailto:contato@guianoivaspiracicaba.com.br">contato@guianoivaspiracicaba.com.br</a></li>
+                    <li><strong>Telefone:</strong> (19) 99999-9999</li>
+                    <li><strong>Horário de Atendimento:</strong> Segunda a Sexta, das 9h às 18h</li>
+                </ul>
+                <div class="redes-sociais">
+                    <p>Siga-nos nas redes sociais:</p>
+                    <a href="#" target="_blank"><img src="imagens/icone-instagram.png" alt="Instagram"></a>
+                    <a href="#" target="_blank"><img src="imagens/icone-facebook.png" alt="Facebook"></a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      <label for="mensagem">Mensagem:</label><br>
-      <textarea id="mensagem" name="mensagem" rows="5" required style="width:100%;padding:8px;margin-bottom:10px;"></textarea><br>
-
-      <button type="submit" style="padding:10px 20px;background:#e91e63;color:white;border:none;border-radius:4px;cursor:pointer;">Enviar</button>
-    </form>
-  </section>
-
-  <!-- Chamada para cadastro -->
-  <section class="cta-cadastro">
-    <h2>Quer divulgar seus serviços?</h2>
-    <p>Cadastre-se e alcance centenas de noivos que procuram fornecedores na região.</p>
-    <a href="/piracicaba/cadastro.html" class="botao">Quero me cadastrar</a>
-  </section>
-
-  <!-- Rodapé padrão -->
-  <footer class="rodape">
-    <div class="rodape-links">
-      <a href="/piracicaba/index.html">Início</a> |
-      <a href="/piracicaba/categorias.html">Categorias</a> |
-      <a href="/piracicaba/sobre.html">Sobre</a> |
-      <a href="/piracicaba/contato.html">Contato</a>
-    </div>
-    <div class="rodape-social">
-      <a href="https://www.instagram.com/guianoivas" target="_blank">Instagram</a> |
-      <a href="https://www.facebook.com/guianoivas" target="_blank">Facebook</a>
-    </div>
-    <p>&copy; 2025 Guia Noivas Piracicaba — Todos os direitos reservados.</p>
-  </footer>
+    <footer class="rodape">
+        <div class="rodape-links">
+            <a href="index.html">Início</a> |
+            <a href="categorias.html">Categorias</a> |
+            <a href="sobre.html">Sobre</a> |
+            <a href="contato.html">Contato</a>
+        </div>
+        <p>&copy; 2025 Guia Noivas Piracicaba. Todos os direitos reservados.</p>
+    </footer>
 
 </body>
 </html>
