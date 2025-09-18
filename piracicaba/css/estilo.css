@@ -1,0 +1,120 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Tipografia e cores principais */
+body {
+  font-family: Georgia, serif;
+  background-color: #fdf6f0;
+  color: #4b3b2a;
+  line-height: 1.6;
+}
+
+/* Cabeçalho e rodapé */
+header, footer {
+  background-color: #e8dcd1;
+  text-align: center;
+  padding: 20px;
+}
+
+header h1 {
+  font-size: 2em;
+  color: #8B1E3F;
+}
+
+footer p {
+  font-size: 0.9em;
+  color: #6e5a4a;
+}
+
+/* Container principal */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Cards de fornecedores */
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin: 15px;
+  max-width: 350px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.card h2 {
+  color: #8B1E3F;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 0.95em;
+  margin-bottom: 10px;
+}
+
+.card ul {
+  padding-left: 20px;
+  font-size: 0.9em;
+  margin-bottom: 10px;
+}
+
+.contact p {
+  font-size: 0.9em;
+  margin: 5px 0;
+}
+
+/* Botões */
+.btn, .voltar {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #d4b8a7;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.btn:hover, .voltar:hover {
+  background-color: #c3a18c;
+}
+
+/* Títulos secundários */
+h2, h3 {
+  color: #8B1E3F;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    max-width: 90%;
+  }
+}
