@@ -37,11 +37,7 @@ body {
 }
 
 .menu-principal .logo img {
-    height: 70px;
-    border: 2px solid #B8926A;
-    border-radius: 50%;
-    padding: 5px;
-    background-color: #fff;
+    height: 80px;
 }
 
 .menu-principal .nav-links {
@@ -362,4 +358,113 @@ body {
     margin-top: 20px;
     font-size: 0.9em;
     color: #ccc;
+}
+
+/* --- 9. Conteúdo da Página de Contato (REFINADO) --- */
+.conteudo-contato {
+    padding: 0; /* Remove padding para o layout de duas colunas funcionar bem */
+    background-color: #F5F5DC;
+    display: flex;
+    align-items: stretch; /* Faz as colunas terem a mesma altura */
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 80px auto; /* Adiciona espaçamento vertical */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden; /* Garante que o border-radius seja aplicado */
+}
+
+.contato-detalhes, .contato-form {
+    flex: 1; /* Divide o espaço igualmente */
+    padding: 60px 40px;
+}
+
+/* Coluna da Esquerda (Detalhes) - Fundo Burgundy */
+.contato-detalhes {
+    background-color: #8B1E3F; /* Burgundy */
+    color: #F5F5DC; /* Texto Creme */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contato-detalhes h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.contato-detalhes p {
+    font-size: 1.1em;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.contato-detalhes ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contato-detalhes ul li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.contato-detalhes ul li .fa-solid {
+    font-size: 1.2em;
+    color: #B8926A; /* Ícones em Dourado */
+}
+
+.contato-detalhes a {
+    color: #F5F5DC;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contato-detalhes a:hover {
+    color: #B8926A;
+}
+
+/* Coluna da Direita (Formulário) - Fundo Branco */
+.contato-form {
+    background-color: #fff;
+}
+
+.contato-form h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
+    color: #8B1E3F;
+    margin-bottom: 30px;
+}
+
+.form-grupo {
+    margin-bottom: 20px;
+}
+
+.form-grupo label {
+    display: block;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #333333;
+}
+
+.form-grupo input,
+.form-grupo textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Lato', sans-serif;
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-grupo input:focus,
+.form-grupo textarea:focus {
+    border-color: #B8926A; /* Dourado ao focar */
+    box-shadow: 0 0 5px rgba(184, 146, 106, 0.5);
+    outline: none;
 }
