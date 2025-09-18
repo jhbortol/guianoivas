@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Fornecedores - Guia Noivas Piracicaba</title>
     <meta name="description" content="Cadastre-se no Guia Noivas Piracicaba e divulgue seus serviços de casamento para centenas de noivos na região.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/estilo.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400&display=swap">
 </head>
 <body>
 
@@ -17,17 +17,16 @@
             </a>
         </div>
         <ul class="nav-links">
-            <li><a href="index.html">Início</a></li>
-            <li><a href="categorias.html">Categorias</a></li>
-            <li><a href="sobre.html">Sobre</a></li>
-            <li><a href="cadastro.html">Cadastro</a></li>
-            <li><a href="contato.html">Contato</a></li>
+            <li><a href="categorias.html"><i class="fa-regular fa-clock"></i> Categorias</a></li>
+            <li><a href="contato.html"><i class="fa-solid fa-cart-shopping"></i> Contato</a></li>
+            <li><a href="cadastro.html"><i class="fa-solid fa-cloud-arrow-down"></i> Cadastro</a></li>
+            <li><a href="sobre.html"><i class="fa-solid fa-display"></i> Sobre</a></li>
         </ul>
     </nav>
 
     <header class="page-header" style="background-image: url('imagens/cadastro-hero.jpg');">
         <div class="page-header-overlay">
-            <h1>Cadastre seu Serviço</h1>
+            <h1>Seja um Parceiro</h1>
             <p>Conecte-se com noivos e noivas de Piracicaba e região.</p>
         </div>
     </header>
@@ -35,27 +34,22 @@
     <section class="conteudo-cadastro">
         <div class="container">
             <div class="cadastro-info">
-                <h2>Seja um Fornecedor Destaque!</h2>
-                <p>O Guia Noivas Piracicaba é a plataforma ideal para impulsionar seu negócio de casamento. Com nosso guia, você terá:</p>
+                <h2>Por que anunciar conosco?</h2>
+                <p>O Guia Noivas Piracicaba é a vitrine perfeita para o seu negócio. Ao se juntar a nós, você ganha:</p>
                 <ul>
-                    <li>**Visibilidade:** Seu serviço exposto para milhares de casais.</li>
-                    <li>**Público Qualificado:** Atinja noivos e noivas que buscam ativamente fornecedores na região.</li>
-                    <li>**Credibilidade:** Faça parte de um seleto grupo de profissionais de excelência.</li>
-                    <li>**Foco:** Concentre-se no seu trabalho, nós cuidamos da divulgação.</li>
+                    <li><strong>Visibilidade Direcionada:</strong> Alcance casais que estão ativamente procurando por seus serviços.</li>
+                    <li><strong>Credibilidade:</strong> Faça parte de um guia com curadoria, sinônimo de qualidade e confiança.</li>
+                    <li>**Plataforma Completa:** Tenha um perfil detalhado para mostrar seu portfólio, serviços e contatos.</li>
                 </ul>
-                <p>Preencha o formulário ao lado e inicie sua jornada conosco. Após o envio, nossa equipe entrará em contato para finalizar o cadastro e criar seu perfil personalizado.</p>
+                <p>Preencha o formulário e nossa equipe entrará em contato para dar os próximos passos.</p>
             </div>
 
             <div class="cadastro-form-container">
-                <h2>Formulário de Cadastro</h2>
+                <h2>Formulário de Interesse</h2>
                 <form class="form-cadastro">
                     <div class="form-grupo">
                         <label for="nome-empresa">Nome da Empresa/Profissional:</label>
                         <input type="text" id="nome-empresa" name="nome-empresa" required>
-                    </div>
-                    <div class="form-grupo">
-                        <label for="responsavel">Nome do Responsável:</label>
-                        <input type="text" id="responsavel" name="responsavel" required>
                     </div>
                     <div class="form-grupo">
                         <label for="email-fornecedor">E-mail para Contato:</label>
@@ -63,46 +57,13 @@
                     </div>
                     <div class="form-grupo">
                         <label for="telefone">Telefone/WhatsApp:</label>
-                        <input type="tel" id="telefone" name="telefone" placeholder="(DD) 9XXXX-XXXX" required>
+                        <input type="tel" id="telefone" name="telefone" required>
                     </div>
                     <div class="form-grupo">
-                        <label for="categoria-servico">Categoria de Serviço Principal:</label>
-                        <select id="categoria-servico" name="categoria-servico" required>
-                            <option value="">Selecione uma categoria</option>
-                            <option value="buffets">Buffets</option>
-                            <option value="decoracao">Decoração</option>
-                            <option value="fotografia">Fotografia</option>
-                            <option value="musica">Música</option>
-                            <option value="beleza">Beleza</option>
-                            <option value="vestidos">Vestidos</option>
-                            <option value="convites">Convites</option>
-                            <option value="doces-bolos">Doces e Bolos</option>
-                            <option value="cerimonial">Cerimonial</option>
-                            <option value="espacos">Espaços</option>
-                            <option value="lembrancinhas">Lembrancinhas</option>
-                            <option value="aluguel-itens">Aluguel de Itens</option>
-                            <option value="transporte">Transporte</option>
-                            <option value="lua-de-mel">Lua de Mel</option>
-                            <option value="entretenimento">Entretenimento</option>
-                            <option value="bar-drinks">Bar e Drinks</option>
-                            <option value="celebrantes">Celebrantes</option>
-                            <option value="moda-masculina">Moda Masculina</option>
-                            <option value="acessorios">Acessórios</option>
-                            </select>
+                        <label for="categoria-servico">Principal Categoria de Serviço:</label>
+                        <input type="text" id="categoria-servico" name="categoria-servico" required>
                     </div>
-                    <div class="form-grupo">
-                        <label for="website">Website (opcional):</label>
-                        <input type="url" id="website" name="website">
-                    </div>
-                    <div class="form-grupo">
-                        <label for="redes-sociais">Link para Redes Sociais (Instagram/Facebook):</label>
-                        <input type="url" id="redes-sociais" name="redes-sociais">
-                    </div>
-                    <div class="form-grupo">
-                        <label for="mensagem-adicional">Conte-nos um pouco sobre seu serviço:</label>
-                        <textarea id="mensagem-adicional" name="mensagem-adicional" rows="4"></textarea>
-                    </div>
-                    <button type="submit" class="btn-primary">Enviar Cadastro</button>
+                    <button type="submit" class="btn-primary">Enviar Interesse</button>
                 </form>
             </div>
         </div>
