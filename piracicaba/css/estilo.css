@@ -25,41 +25,47 @@ body {
 /* --- 1. Menu Principal (Navegação) --- */
 .menu-principal {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Alinha itens nas extremidades */
     align-items: center;
     padding: 15px 50px;
-    background-color: rgba(245, 245, 220, 0.8); /* Fundo Creme com transparência */
+    background-color: rgba(245, 245, 220, 0.9); /* Fundo Creme com mais opacidade */
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(184, 146, 106, 0.3); /* Borda Dourada sutil */
+    border-bottom: 1px solid rgba(184, 146, 106, 0.3);
     position: sticky;
     top: 0;
     z-index: 1000;
+    width: 100%;
 }
 
 .menu-principal .logo img {
-    height: 65px;
+    height: 70px; /* Aumenta um pouco o logo */
+    border: 2px solid #B8926A; /* Borda Dourada */
+    border-radius: 50%; /* Deixa o logo circular */
+    padding: 5px;
+    background-color: #fff;
 }
 
 .menu-principal .nav-links {
     list-style: none;
     display: flex;
-    gap: 35px;
+    gap: 40px; /* Aumenta o espaçamento entre os links */
+    align-items: center;
 }
 
 .menu-principal .nav-links a {
     text-decoration: none;
-    color: #8B1E3F; /* Burgundy */
+    color: #333333; /* Cinza Escuro para melhor leitura */
     font-family: 'Lato', sans-serif;
-    font-weight: 700;
+    font-weight: 400; /* Peso da fonte mais leve */
     font-size: 1.1em;
     transition: color 0.3s ease;
     display: flex;
     align-items: center;
-    gap: 8px; /* Espaço entre ícone e texto */
+    gap: 8px;
 }
 
 .menu-principal .nav-links a:hover {
-    color: #B8926A; /* Dourado */
+    color: #8B1E3F; /* Burgundy no hover */
 }
 
 /* --- 2. Seção Hero (Página Inicial) --- */
