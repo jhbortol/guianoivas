@@ -1,51 +1,84 @@
-/* --- Menu Principal (Ajustes para o logo no topo) --- */
+/* Importação das Fontes e Ícones */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+/* --- Reset Básico e Padrões do Body --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: #333333;
+    background-color: #F5F5DC; /* Creme/Off-White */
+    background-image: url('../imagens/background-texture.png');
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* --- 1. Menu Principal (Unificado) --- */
 .menu-principal {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 50px;
-    background-color: #F5F5DC; /* Fundo creme */
-    border-bottom: 1px solid rgba(0,0,0,0.05);
+    background-color: rgba(245, 245, 220, 0.9);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(184, 146, 106, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .menu-principal .logo img {
-    height: 80px; /* Ajuste o tamanho do seu logo */
+    height: 70px;
+    border: 2px solid #B8926A;
+    border-radius: 50%;
+    padding: 5px;
+    background-color: #fff;
 }
 
 .menu-principal .nav-links {
     list-style: none;
     display: flex;
-}
-
-.menu-principal .nav-links li {
-    margin-left: 30px;
+    gap: 40px;
+    align-items: center;
 }
 
 .menu-principal .nav-links a {
     text-decoration: none;
-    color: #8B1E3F; /* Burgundy */
+    color: #333333;
     font-family: 'Lato', sans-serif;
-    font-weight: 700;
+    font-weight: 400;
     font-size: 1.1em;
     transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .menu-principal .nav-links a:hover {
-    color: #B8926A; /* Dourado */
+    color: #8B1E3F;
 }
 
-/* --- Hero Section (Página Inicial - Refinado da simulação) --- */
+/* --- 2. Seção Hero (Página Inicial) --- */
 .hero-section {
     position: relative;
-    height: 80vh; /* Ajuste a altura conforme a imagem */
+    height: 80vh;
     background-size: cover;
     background-position: center;
     display: flex;
-    align-items: flex-end; /* Alinha o conteúdo na parte inferior */
+    align-items: flex-end;
     justify-content: center;
     text-align: center;
     color: #fff;
-    padding-bottom: 50px; /* Espaçamento da parte inferior */
+    padding-bottom: 50px;
 }
 
 .hero-overlay {
@@ -54,200 +87,38 @@
     left: 0;
     width: 100%;
     height: 100%;
-    /* Gradiente transparente para cinza claro no fundo, como na imagem */
-    background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 100%);
+    background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 50%);
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; /* Conteúdo na parte de baixo */
+    justify-content: flex-end;
     align-items: center;
-    padding-bottom: 80px; /* Mais padding para o conteúdo não ficar colado */
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 80px 20px 80px;
 }
 
 .hero-section h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 4.5em; /* Ligeiramente maior */
+    font-size: 4.5em;
     margin-bottom: 10px;
-    color: #F5F5DC; /* Off-White */
+    color: #F5F5DC;
     text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
-    letter-spacing: 2px; /* Adicionado para o estilo da imagem */
-    text-transform: uppercase; /* Como na simulação */
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 .hero-section p {
     font-family: 'Lato', sans-serif;
-    font-size: 1.4em; /* Ligeiramente menor */
+    font-size: 1.4em;
     margin-bottom: 30px;
     max-width: 800px;
     color: #F5F5DC;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
 }
 
-.btn-primary {
-    background-color: #8B1E3F; /* Burgundy */
-    color: #F5F5DC; /* Off-White */
-    padding: 12px 28px; /* Ajuste para ser um pouco menor que o original */
-    font-size: 1em;
-    border-radius: 5px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 700;
-}
-
-.btn-primary:hover {
-    background-color: #B8926A; /* Dourado */
-    color: #333333; /* Texto mais escuro no hover para contraste */
-}
-
-/* --- Seção de Destaque de Categorias (com cards de fornecedores - conforme simulação) --- */
-.destaque-categorias {
-    padding: 60px 20px;
-    text-align: center;
-    background-color: #F5F5DC;
-}
-
-.destaque-categorias h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.8em;
-    color: #8B1E3F;
-    margin-bottom: 40px;
-}
-
-.categorias-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 3 colunas em desktop */
-    gap: 30px; /* Mais espaço entre os cards */
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Estilos específicos para os cards de fornecedores na HOME, como na simulação */
-.categoria-card {
-    background-color: #fff;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Sombra um pouco mais proeminente */
-    text-decoration: none;
-    color: #333333;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid #B8926A; /* Borda dourada sutil */
-    padding-bottom: 20px; /* Espaço para o texto */
-}
-
-.categoria-card:hover {
-    transform: translateY(-10px); /* Move um pouco mais */
-    box-shadow: 0 10px 20px rgba(0,0,0,0.18);
-}
-
-.categoria-card img {
-    width: 100%;
-    height: 250px; /* Imagens mais altas */
-    object-fit: cover;
-    display: block;
-    margin-bottom: 15px; /* Espaço entre imagem e título */
-}
-
-.categoria-card h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.8em; /* Título maior */
-    color: #8B1E3F;
-    padding: 0 15px;
-    margin-bottom: 5px; /* Mais próximo da descrição */
-    text-align: left; /* Alinhamento à esquerda como na simulação */
-}
-
-.categoria-card .card-descricao {
-    font-family: 'Lato', sans-serif;
-    font-size: 0.9em;
-    color: #333333;
-    padding: 0 15px;
-    margin-bottom: 15px; /* Espaço antes do ícone, se houver */
-    text-align: left;
-}
-
-.categoria-card .icone-folha {
-    display: block;
-    width: 25px;
-    height: 25px;
-    margin-left: 15px;
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%2394A286" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-leaf"><path d="M22 2v20L2 12 22 2z"></path></svg>');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-
-/* --- Rodapé --- */
-.rodape {
-    background-color: #333333;
-    color: #F5F5DC;
-    text-align: center;
-    padding: 30px 20px;
-    font-family: 'Lato', sans-serif;
-    font-size: 0.9em;
-}
-
-.rodape-links a {
-    color: #B8926A; /* Dourado */
-    text-decoration: none;
-    margin: 0 10px;
-    transition: color 0.3s ease;
-}
-
-.rodape-links a:hover {
-    color: #F5F5DC;
-}
-
-.rodape p {
-    margin-top: 15px;
-}
-
-/* --- Responsividade --- */
-@media (max-width: 768px) {
-    .menu-principal {
-        flex-direction: column;
-        padding: 15px 20px;
-    }
-
-    .menu-principal .logo {
-        margin-bottom: 15px;
-    }
-
-    .menu-principal .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .menu-principal .nav-links li {
-        margin: 0 10px 10px 10px;
-    }
-
-    .hero-section h1 {
-        font-size: 3em;
-    }
-
-    .hero-section p {
-        font-size: 1.1em;
-    }
-
-    .destaque-categorias h2 {
-        font-size: 2em;
-    }
-
-    .categorias-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .categoria-card h3 {
-        font-size: 1.6em;
-    }
-}
-
-/* --- Page Header (Cabeçalho de Páginas Internas) --- */
+/* --- 3. Page Header (Páginas Internas e de Categoria) --- */
 .page-header {
     position: relative;
-    height: 50vh; /* Altura de 50% da tela */
-    min-height: 350px; /* Altura mínima para telas menores */
+    height: 50vh;
+    min-height: 350px;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -263,7 +134,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.3)); /* Gradiente mais forte */
+    background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.3));
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -273,9 +144,9 @@
 
 .page-header h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 3.8em; /* Levemente maior */
-    color: #fff; /* Branco puro para contraste */
-    text-shadow: 2px 3px 6px rgba(0,0,0,0.7); /* Sombra mais pronunciada */
+    font-size: 3.8em;
+    color: #fff;
+    text-shadow: 2px 3px 6px rgba(0,0,0,0.7);
     margin: 0;
 }
 
@@ -285,6 +156,210 @@
     color: #fff;
     text-shadow: 1px 2px 4px rgba(0,0,0,0.7);
     margin-top: 15px;
-    max-width: 600px; /* Limita a largura do parágrafo */
+    max-width: 600px;
     line-height: 1.5;
+}
+
+/* --- 4. Botões --- */
+.btn-primary {
+    background-color: #8B1E3F;
+    color: #F5F5DC;
+    padding: 12px 28px;
+    font-size: 1em;
+    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #B8926A;
+    color: #333333;
+}
+
+/* --- 5. Cards de Categoria (index.html e categorias.html) --- */
+.destaque-categorias, .todas-categorias-lista {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: transparent;
+}
+
+.destaque-categorias h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8em;
+    color: #8B1E3F;
+    margin-bottom: 40px;
+}
+
+.categorias-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.categoria-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-decoration: none;
+    color: #333333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #B8926A;
+    text-align: left;
+}
+
+.categoria-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.18);
+}
+
+.categoria-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-content {
+    padding: 20px 20px 15px 20px;
+}
+
+.card-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8em;
+    color: #8B1E3F;
+    margin-bottom: 8px;
+}
+
+.card-content .card-descricao {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.95em;
+    color: #555;
+    line-height: 1.5;
+}
+
+.card-icon-wrapper {
+    padding: 0 20px 20px 20px;
+    text-align: left;
+}
+
+.card-icon-wrapper .fa-leaf {
+    color: #94A286; /* Verde Suave */
+    font-size: 1.5em;
+}
+
+/* --- 6. CONTEÚDO DAS PÁGINAS DE CATEGORIA (NOVO) --- */
+.categoria-intro {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: transparent;
+}
+
+.categoria-intro p {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #333333;
+    line-height: 1.7;
+}
+
+.fornecedores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.fornecedor-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #eee;
+}
+
+.fornecedor-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.fornecedor-info {
+    padding: 25px;
+}
+
+.fornecedor-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.7em;
+    color: #8B1E3F;
+    margin-bottom: 10px;
+}
+
+.fornecedor-info p {
+    font-family: 'Lato', sans-serif;
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* --- 7. Chamada para Cadastro (CTA) --- */
+.cta-cadastro {
+    background-color: #8B1E3F; /* Burgundy */
+    color: #F5F5DC;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.cta-cadastro h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+.cta-cadastro p {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- 8. Rodapé --- */
+.rodape {
+    background-color: #333333;
+    color: #F5F5DC;
+    text-align: center;
+    padding: 40px 20px;
+    font-family: 'Lato', sans-serif;
+}
+
+.rodape-links a {
+    color: #B8926A;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+.rodape-links a:hover {
+    color: #fff;
+}
+
+.rodape p {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #ccc;
 }
