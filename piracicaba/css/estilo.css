@@ -468,3 +468,149 @@ body {
     box-shadow: 0 0 5px rgba(184, 146, 106, 0.5);
     outline: none;
 }
+
+/* --- 10. Conteúdo da Página Sobre (REFINADO) --- */
+.conteudo-sobre {
+    padding: 80px 20px;
+    background-color: transparent;
+}
+
+.sobre-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto 80px auto;
+}
+
+.sobre-texto h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8em;
+    color: #8B1E3F;
+    margin-bottom: 20px;
+}
+
+.sobre-texto p {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.sobre-imagem img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.valores-secao {
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.valores-secao h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8em;
+    color: #8B1E3F;
+    margin-bottom: 50px;
+}
+
+.valores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    text-align: left;
+}
+
+.valor-item {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid rgba(184, 146, 106, 0.3); /* Borda Dourada sutil */
+}
+
+.valor-item i {
+    font-size: 2.5em;
+    color: #B8926A; /* Dourado */
+    margin-bottom: 15px;
+}
+
+.valor-item h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8em;
+    color: #8B1E3F;
+    margin-bottom: 10px;
+}
+
+.valor-item p {
+    font-family: 'Lato', sans-serif;
+    font-size: 1em;
+    line-height: 1.7;
+    color: #333;
+}
+
+/* Responsividade para a página Sobre */
+@media (max-width: 768px) {
+    .sobre-grid {
+        grid-template-columns: 1fr;
+    }
+    .sobre-imagem {
+        order: -1; /* Coloca a imagem no topo em mobile */
+    }
+}
+
+/* --- 11. Conteúdo da Página de Cadastro (REFINADO) --- */
+.conteudo-cadastro {
+    padding: 80px 20px;
+    background-color: transparent;
+}
+
+.cadastro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden; /* Garante que a imagem não ultrapasse a borda arredondada */
+}
+
+.cadastro-imagem {
+    background-size: cover;
+    background-position: center;
+    min-height: 500px;
+}
+
+.cadastro-form-container {
+    padding: 60px 40px;
+}
+
+.cadastro-form-container h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8em;
+    color: #8B1E3F;
+    margin-bottom: 15px;
+}
+
+.cadastro-form-container p {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.1em;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+/* Responsividade para a página de Cadastro */
+@media (max-width: 992px) {
+    .cadastro-grid {
+        grid-template-columns: 1fr;
+    }
+    .cadastro-imagem {
+        height: 300px; /* Altura fixa para a imagem em mobile */
+    }
+}
