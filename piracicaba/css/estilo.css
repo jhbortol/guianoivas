@@ -242,3 +242,49 @@
         font-size: 1.6em;
     }
 }
+
+/* --- Page Header (Cabeçalho de Páginas Internas) --- */
+.page-header {
+    position: relative;
+    height: 50vh; /* Altura de 50% da tela */
+    min-height: 350px; /* Altura mínima para telas menores */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.page-header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.3)); /* Gradiente mais forte */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.page-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.8em; /* Levemente maior */
+    color: #fff; /* Branco puro para contraste */
+    text-shadow: 2px 3px 6px rgba(0,0,0,0.7); /* Sombra mais pronunciada */
+    margin: 0;
+}
+
+.page-header p {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.4em;
+    color: #fff;
+    text-shadow: 1px 2px 4px rgba(0,0,0,0.7);
+    margin-top: 15px;
+    max-width: 600px; /* Limita a largura do parágrafo */
+    line-height: 1.5;
+}
