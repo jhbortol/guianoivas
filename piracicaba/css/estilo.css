@@ -614,3 +614,126 @@ body {
         height: 300px; /* Altura fixa para a imagem em mobile */
     }
 }
+
+/* --- 12. PÁGINA DE FORNECEDOR INDIVIDUAL (NOVO) --- */
+.fornecedor-header {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #fff; /* Fundo branco para destacar a informação */
+}
+
+.fornecedor-header .categoria-tag {
+    font-family: 'Lato', sans-serif;
+    font-size: 1em;
+    font-weight: 700;
+    color: #B8926A; /* Dourado */
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+
+.fornecedor-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5em;
+    color: #8B1E3F; /* Burgundy */
+    margin-bottom: 15px;
+}
+
+.fornecedor-header .fornecedor-localizacao {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.fornecedor-conteudo {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Coluna principal maior que a lateral */
+    gap: 50px;
+    padding: 60px 20px;
+}
+
+.fornecedor-principal h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2em;
+    color: #8B1E3F;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #B8926A;
+    padding-bottom: 10px;
+}
+
+.fornecedor-principal p {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.galeria-fotos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.galeria-fotos img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galeria-fotos img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.fornecedor-sidebar {
+    background-color: #fff;
+    padding: 30px;
+    border: 1px solid #B8926A;
+    border-radius: 8px;
+    height: fit-content; /* Para a caixa não se estender desnecessariamente */
+}
+
+.fornecedor-sidebar h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8em;
+    color: #8B1E3F;
+    margin-bottom: 25px;
+}
+
+.info-contato li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.1em;
+}
+
+.info-contato li i {
+    font-size: 1.3em;
+    color: #B8926A;
+    width: 25px; /* Alinha os ícones */
+    text-align: center;
+}
+
+.info-contato a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.info-contato a:hover {
+    color: #8B1E3F;
+}
+
+/* Responsividade para a página de fornecedor */
+@media (max-width: 992px) {
+    .fornecedor-conteudo {
+        grid-template-columns: 1fr;
+    }
+}
