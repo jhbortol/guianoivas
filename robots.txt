@@ -1,0 +1,6 @@
+# Permitir que todos os robôs de busca acessem todo o site.
+User-agent: *
+Disallow:
+
+# Localização do mapa do site (Sitemap) para ajudar na indexação.
+Sitemap: https://www.guianoivas.com/sitemap.xml
