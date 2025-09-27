@@ -737,3 +737,91 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+/* --- Estilos da Secção de Depoimentos --- */
+
+.fornecedor-principal h2 {
+    font-family: 'Playfair Display', serif;
+    color: #333;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.depoimentos-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px; /* Espaçamento entre os cards */
+    justify-content: space-between;
+}
+
+.depoimento-card {
+    background-color: #fdfdfd;
+    border-left: 4px solid #B8926A; /* Borda dourada da marca */
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    flex-basis: calc(50% - 15px); /* Para dois cards por linha, com o gap */
+    box-sizing: border-box;
+    position: relative;
+    padding-top: 40px;
+}
+
+.depoimento-card .fa-quote-left {
+    position: absolute;
+    top: 20px;
+    left: 25px;
+    font-size: 2rem;
+    color: #B8926A; /* Cor dourada da marca */
+    opacity: 0.5;
+}
+
+.depoimento-card blockquote {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    font-style: italic;
+    border: none;
+}
+
+.depoimento-card cite {
+    display: block;
+    margin-top: 15px;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-align: right;
+    color: #8B1E3F; /* Cor burgundy da marca */
+}
+
+/* Ajuste para ecrãs mais pequenos */
+@media (max-width: 768px) {
+    .depoimento-card {
+        flex-basis: 100%; /* Um card por linha */
+    }
+}
+
+/* --- Ajustes de Tipografia para a Secção Sobre --- */
+
+.perfil-sobre p {
+    line-height: 1.7; /* Melhora a legibilidade do texto */
+    color: #444;
+    margin-bottom: 1em;
+    text-align: justify; /* Adicionado para justificar o texto */
+}
+
+.perfil-sobre .primeiro-paragrafo::first-letter {
+    font-family: 'Playfair Display', serif;
+    font-size: 4.5rem; /* Tamanho da letra capitular */
+    float: left;
+    margin-right: 12px;
+    line-height: 1;
+    color: #B8926A; /* Cor dourada da marca */
+    padding-top: 4px;
+}
+
+
