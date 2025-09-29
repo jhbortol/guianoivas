@@ -10,11 +10,12 @@
 </head>
 <body>
 
-    <nav class="menu-principal">
+   <nav class="menu-principal">
         <div class="logo">
-            <a href="index.html">
-                <img src="imagens/logo.png" alt="Guia Noivas Piracicaba Logo">
-            </a>
+            <a href="index.html"><img src="imagens/logo.png" alt="Guia Noivas Piracicaba Logo"></a>
+        </div>
+        <div class="menu-hamburguer">
+            <i class="fa-solid fa-bars"></i>
         </div>
         <ul class="nav-links">
             <li><a href="categorias.html"><i class="fa-regular fa-clock"></i> Categorias</a></li>
@@ -40,7 +41,8 @@
                     <p>Se preferir, pode nos contatar diretamente através dos nossos canais. Teremos todo o prazer em ajudar!</p>
                     <ul>
                         <li><i class="fa-solid fa-envelope"></i> <a href="mailto:contato@guianoivaspiracicaba.com.br">contato@guianoivaspiracicaba.com.br</a></li>
-                        <li><i class="fa-solid fa-phone"></i> <a href="tel:+5519999999999">(19) 99999-9999</a></li>
+                        <li><i class="fa-solid fa-phone"></i> <a href="tel:+5519989786156">(19) 98978-6156</a></li>
+                        <li><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/5519989786156" target="_blank">(19) 98978-6156</a></li>
                         <li><i class="fa-solid fa-clock"></i> Segunda a Sexta, das 9h às 18h</li>
                     </ul>
                 </div>
@@ -81,6 +83,13 @@
         </div>
         <p>&copy; 2025 Guia Noivas Piracicaba. Todos os direitos reservados.</p>
     </footer>
+<script>
+    const menuHamburguer = document.querySelector('.menu-hamburguer');
+    const navLinks = document.querySelector('.nav-links');
 
+    menuHamburguer.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+</script>
 </body>
 </html>
