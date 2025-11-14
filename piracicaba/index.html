@@ -10,22 +10,8 @@
 </head>
 <body>
 
-   <nav class="menu-principal">
-        <div class="logo">
-            <a href="index.html"><img src="imagens/logo.png" alt="Guia Noivas Piracicaba Logo"></a>
-        </div>
-        <div class="menu-hamburguer">
-            <i class="fa-solid fa-bars"></i>
-        </div>
-        <ul class="nav-links">
-            <li><a href="categorias.html"><i class="fa-regular fa-clock"></i> Categorias</a></li>
-            <li><a href="contato.html"><i class="fa-solid fa-cart-shopping"></i> Contato</a></li>
-            <li><a href="cadastro.html"><i class="fa-solid fa-cloud-arrow-down"></i> Cadastro</a></li>
-            <li><a href="sobre.html"><i class="fa-solid fa-display"></i> Sobre</a></li>
-        </ul>
-    </nav>
-
-    <header class="hero-section" style="background-image: url('imagens/hero.jpg');">
+    <div id="site-header"></div>
+<header class="hero-section" style="background-image: url('imagens/hero.jpg');">
         <div class="hero-overlay">
             <h1>Encontre Seus Sonhos</h1>
             <p>Os melhores fornecedores para o seu casamento em Piracicaba</p>
@@ -39,7 +25,11 @@
             <div class="categorias-grid">
                 
                 <a href="categorias/buffet.html" class="categoria-card">
-                    <img src="imagens/cat-buffets.jpg" alt="Buffets para Casamento">
+                    <picture>
+    <source srcset="imagens/cat-buffets.webp" type="image/webp">
+    <source srcset="imagens/cat-buffets.jpg" type="image/jpeg">
+    <img src="imagens/cat-buffets.jpg" alt="Buffets para Casamento" loading="lazy">
+</picture>
                     <div class="card-content">
                         <h3>Buffets</h3>
                         <p>Sabores inesquecíveis para celebrar seu grande dia.</p>
@@ -47,7 +37,11 @@
                 </a>
 
                 <a href="categorias/decoracao.html" class="categoria-card">
-                    <img src="imagens/cat-decoracao.jpg" alt="Decoração de Casamento">
+                    <picture>
+    <source srcset="imagens/cat-decoracao.webp" type="image/webp">
+    <source srcset="imagens/cat-decoracao.jpg" type="image/jpeg">
+    <img src="imagens/cat-decoracao.jpg" alt="Decoração de Casamento" loading="lazy">
+</picture>
                     <div class="card-content">
                         <h3>Decoração</h3>
                         <p>Ambientes mágicos que contam a sua história de amor.</p>
@@ -55,7 +49,11 @@
                 </a>
 
                 <a href="categorias/fotografia.html" class="categoria-card">
-                    <img src="imagens/cat-fotografia.jpg" alt="Fotografia de Casamento">
+                    <picture>
+    <source srcset="imagens/cat-fotografia.webp" type="image/webp">
+    <source srcset="imagens/cat-fotografia.jpg" type="image/jpeg">
+    <img src="imagens/cat-fotografia.jpg" alt="Fotografia de Casamento" loading="lazy">
+</picture>
                     <div class="card-content">
                         <h3>Fotografia</h3>
                         <p>Memórias eternas capturadas com sensibilidade e arte.</p>
@@ -75,13 +73,6 @@
         </div>
         <p>&copy; 2025 Guia Noivas Piracicaba. Todos os direitos reservados.</p>
     </footer>
-<script>
-    const menuHamburguer = document.querySelector('.menu-hamburguer');
-    const navLinks = document.querySelector('.nav-links');
-
-    menuHamburguer.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-    });
-</script>
+<script src="/js/include-header.js" defer></script>
 </body>
 </html>

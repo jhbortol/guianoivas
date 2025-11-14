@@ -10,23 +10,8 @@
 </head>
 <body>
 
-   <nav class="menu-principal">
-        <div class="logo">
-            <a href="index.html"><img src="../imagens/logo.png" alt="Guia Noivas Piracicaba Logo"></a>
-        </div>
-        <div class="menu-hamburguer">
-            <i class="fa-solid fa-bars"></i>
-        </div>
-        <ul class="nav-links">
-            <li><a href="../categorias.html"><i class="fa-regular fa-clock"></i> Categorias</a></li>
-            <li><a href="../contato.html"><i class="fa-solid fa-cart-shopping"></i> Contato</a></li>
-            <li><a href="../cadastro.html"><i class="fa-solid fa-cloud-arrow-down"></i> Cadastro</a></li>
-            <li><a href="../sobre.html"><i class="fa-solid fa-display"></i> Sobre</a></li>
-        </ul>
-    </nav>
-
-
-    <main>
+    <div id="site-header"></div>
+<main>
         <header class="page-header" style="background-image: url('../imagens/cat-decoracao.jpg');">
             <div class="page-header-overlay">
                 <h1>Decoração</h1>
@@ -43,7 +28,11 @@
         <section class="fornecedores-grid">
             <div class="container">
                 <div class="fornecedor-card">
-                    <img src="../imagens/fornecedores/flor-arte-1.jpg" alt="Flor & Arte Decorações">
+                    <picture>
+    <source srcset="../imagens/fornecedores/flor-arte-1.webp" type="image/webp">
+    <source srcset="../imagens/fornecedores/flor-arte-1.jpg" type="image/jpeg">
+    <img src="../imagens/fornecedores/flor-arte-1.jpg" alt="Flor & Arte Decorações" loading="lazy">
+</picture>
                     <div class="fornecedor-info">
                         <h3>Flor & Arte Decorações (Demo)</h3>
                         <p>Projetos de decoração floral e cenografia que combinam romantismo e elegância para criar ambientes mágicos.</p>
@@ -52,7 +41,11 @@
                 </div>
 
                 <div class="fornecedor-card">
-                    <img src="../imagens/fornecedores/cenarios-sonho-1.jpg" alt="Cenários de Sonho">
+                    <picture>
+    <source srcset="../imagens/fornecedores/cenarios-sonho-1.webp" type="image/webp">
+    <source srcset="../imagens/fornecedores/cenarios-sonho-1.jpg" type="image/jpeg">
+    <img src="../imagens/fornecedores/cenarios-sonho-1.jpg" alt="Cenários de Sonho" loading="lazy">
+</picture>
                     <div class="fornecedor-info">
                         <h3>Cenários de Sonho (Demo)</h3>
                         <p>Especialistas em decoração de luxo e cenografia completa para eventos de grande porte e projetos ambiciosos.</p>
@@ -81,13 +74,6 @@
         <p>&copy; 2025 Guia Noivas Piracicaba. Todos os direitos reservados.</p>
     </footer>
 
-<script>
-    const menuHamburguer = document.querySelector('.menu-hamburguer');
-    const navLinks = document.querySelector('.nav-links');
-
-    menuHamburguer.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-    });
-</script>
+<script src="/js/include-header.js" defer></script>
 </body>
 </html>

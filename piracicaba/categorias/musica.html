@@ -10,23 +10,8 @@
 </head>
 <body>
 
-   <nav class="menu-principal">
-        <div class="logo">
-            <a href="index.html"><img src="../imagens/logo.png" alt="Guia Noivas Piracicaba Logo"></a>
-        </div>
-        <div class="menu-hamburguer">
-            <i class="fa-solid fa-bars"></i>
-        </div>
-        <ul class="nav-links">
-            <li><a href="../categorias.html"><i class="fa-regular fa-clock"></i> Categorias</a></li>
-            <li><a href="../contato.html"><i class="fa-solid fa-cart-shopping"></i> Contato</a></li>
-            <li><a href="../cadastro.html"><i class="fa-solid fa-cloud-arrow-down"></i> Cadastro</a></li>
-            <li><a href="../sobre.html"><i class="fa-solid fa-display"></i> Sobre</a></li>
-        </ul>
-    </nav>
-
-
-    <main>
+    <div id="site-header"></div>
+<main>
         <header class="page-header" style="background-image: url('../imagens/cat-musica.jpg');">
             <div class="page-header-overlay">
                 <h1>Música</h1>
@@ -43,7 +28,11 @@
         <section class="fornecedores-grid">
             <div class="container">
                 <div class="fornecedor-card">
-                    <img src="../imagens/fornecedores/banda-harmonia-1.jpg" alt="Banda Harmonia">
+                    <picture>
+    <source srcset="../imagens/fornecedores/banda-harmonia-1.webp" type="image/webp">
+    <source srcset="../imagens/fornecedores/banda-harmonia-1.jpg" type="image/jpeg">
+    <img src="../imagens/fornecedores/banda-harmonia-1.jpg" alt="Banda Harmonia" loading="lazy">
+</picture>
                     <div class="fornecedor-info">
                         <h3>Banda Harmonia (Demo)</h3>
                         <p>Banda versátil com um repertório eclético, ideal para manter a pista de dança cheia com muita energia e profissionalismo.</p>
@@ -52,7 +41,11 @@
                 </div>
 
                 <div class="fornecedor-card">
-                    <img src="../imagens/fornecedores/dj-emotion-1.jpg" alt="DJ Emotion">
+                    <picture>
+    <source srcset="../imagens/fornecedores/dj-emotion-1.webp" type="image/webp">
+    <source srcset="../imagens/fornecedores/dj-emotion-1.jpg" type="image/jpeg">
+    <img src="../imagens/fornecedores/dj-emotion-1.jpg" alt="DJ Emotion" loading="lazy">
+</picture>
                     <div class="fornecedor-info">
                         <h3>DJ Emotion (Demo)</h3>
                         <p>DJ especialista em criar a atmosfera ideal para cada fase do evento, com uma leitura de pista impecável e sets personalizados.</p>
@@ -81,13 +74,6 @@
         <p>&copy; 2025 Guia Noivas Piracicaba. Todos os direitos reservados.</p>
     </footer>
 
-<script>
-    const menuHamburguer = document.querySelector('.menu-hamburguer');
-    const navLinks = document.querySelector('.nav-links');
-
-    menuHamburguer.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-    });
-</script>
+<script src="/js/include-header.js" defer></script>
 </body>
 </html>        

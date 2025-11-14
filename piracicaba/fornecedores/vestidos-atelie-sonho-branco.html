@@ -8,22 +8,8 @@
 </head>
 <body>
 
-    <nav class="menu-principal">
-        <div class="logo">
-            <a href="index.html"><img src="../imagens/logo.png" alt="Guia Noivas Piracicaba Logo"></a>
-        </div>
-        <div class="menu-hamburguer">
-            <i class="fa-solid fa-bars"></i>
-        </div>
-        <ul class="nav-links">
-            <li><a href="../categorias.html"><i class="fa-regular fa-clock"></i> Categorias</a></li>
-            <li><a href="../contato.html"><i class="fa-solid fa-cart-shopping"></i> Contato</a></li>
-            <li><a href="../cadastro.html"><i class="fa-solid fa-cloud-arrow-down"></i> Cadastro</a></li>
-            <li><a href="../sobre.html"><i class="fa-solid fa-display"></i> Sobre</a></li>
-        </ul>
-    </nav>
-
-    <main>
+    <div id="site-header"></div>
+<main>
         <header class="fornecedor-header">
             <p class="categoria-tag">Vestidos de Noiva</p>
             <h1>Ateliê Sonho Branco</h1>
@@ -38,9 +24,21 @@
                 
                 <h2>Galeria de Fotos</h2>
                 <div class="galeria-fotos">
-                    <img src="../imagens/fornecedores/atelie-sonho-branco-1.jpg" alt="Noiva a experimentar um vestido de noiva no ateliê">
-                    <img src="../imagens/fornecedores/atelie-sonho-branco-2.jpg" alt="Detalhe de bordado artesanal em renda num vestido">
-                    <img src="../imagens/fornecedores/atelie-sonho-branco-3.jpg" alt="Estilista a fazer ajustes num manequim">
+                    <picture>
+    <source srcset="../imagens/fornecedores/atelie-sonho-branco-1.webp" type="image/webp">
+    <source srcset="../imagens/fornecedores/atelie-sonho-branco-1.jpg" type="image/jpeg">
+    <img src="../imagens/fornecedores/atelie-sonho-branco-1.jpg" alt="Noiva a experimentar um vestido de noiva no ateliê" loading="lazy">
+</picture>
+                    <picture>
+    <source srcset="../imagens/fornecedores/atelie-sonho-branco-2.webp" type="image/webp">
+    <source srcset="../imagens/fornecedores/atelie-sonho-branco-2.jpg" type="image/jpeg">
+    <img src="../imagens/fornecedores/atelie-sonho-branco-2.jpg" alt="Detalhe de bordado artesanal em renda num vestido" loading="lazy">
+</picture>
+                    <picture>
+    <source srcset="../imagens/fornecedores/atelie-sonho-branco-3.webp" type="image/webp">
+    <source srcset="../imagens/fornecedores/atelie-sonho-branco-3.jpg" type="image/jpeg">
+    <img src="../imagens/fornecedores/atelie-sonho-branco-3.jpg" alt="Estilista a fazer ajustes num manequim" loading="lazy">
+</picture>
                 </div>
             </div>
 
@@ -66,13 +64,6 @@
         <p>&copy; 2025 Guia Noivas Piracicaba. Todos os direitos reservados.</p>
     </footer>
 
-<script>
-    const menuHamburguer = document.querySelector('.menu-hamburguer');
-    const navLinks = document.querySelector('.nav-links');
-
-    menuHamburguer.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-    });
-</script>
+<script src="/js/include-header.js" defer></script>
 </body>
 </html>        

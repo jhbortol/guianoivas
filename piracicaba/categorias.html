@@ -10,22 +10,8 @@
 </head>
 <body>
 
-   <nav class="menu-principal">
-        <div class="logo">
-            <a href="index.html"><img src="imagens/logo.png" alt="Guia Noivas Piracicaba Logo"></a>
-        </div>
-        <div class="menu-hamburguer">
-            <i class="fa-solid fa-bars"></i>
-        </div>
-        <ul class="nav-links">
-            <li><a href="categorias.html"><i class="fa-regular fa-clock"></i> Categorias</a></li>
-            <li><a href="contato.html"><i class="fa-solid fa-cart-shopping"></i> Contato</a></li>
-            <li><a href="cadastro.html"><i class="fa-solid fa-cloud-arrow-down"></i> Cadastro</a></li>
-            <li><a href="sobre.html"><i class="fa-solid fa-display"></i> Sobre</a></li>
-        </ul>
-    </nav>
-
-    <header class="page-header" style="background-image: url('imagens/categorias-hero.jpg');">
+    <div id="site-header"></div>
+<header class="page-header" style="background-image: url('imagens/categorias-hero.jpg');">
         <div class="page-header-overlay">
             <h1>Todas as Categorias</h1>
             <p>Do convite à lua de mel, encontre os fornecedores ideais para transformar seu sonho em realidade.</p>
@@ -37,32 +23,56 @@
             <div class="categorias-grid">
 
                 <a href="categorias/buffet.html" class="categoria-card">
-                    <img src="imagens/cat-buffets.jpg" alt="Buffets">
+                    <picture>
+    <source srcset="imagens/cat-buffets.webp" type="image/webp">
+    <source srcset="imagens/cat-buffets.jpg" type="image/jpeg">
+    <img src="imagens/cat-buffets.jpg" alt="Buffets" loading="lazy">
+</picture>
                     <div class="card-content"><h3>Buffets</h3></div>
                     
                 </a>
                 <a href="categorias/decoracao.html" class="categoria-card">
-                    <img src="imagens/cat-decoracao.jpg" alt="Decoração">
+                    <picture>
+    <source srcset="imagens/cat-decoracao.webp" type="image/webp">
+    <source srcset="imagens/cat-decoracao.jpg" type="image/jpeg">
+    <img src="imagens/cat-decoracao.jpg" alt="Decoração" loading="lazy">
+</picture>
                     <div class="card-content"><h3>Decoração</h3></div>
                     
                 </a>
                 <a href="categorias/musica.html" class="categoria-card">
-                    <img src="imagens/cat-musica.jpg" alt="Música">
+                    <picture>
+    <source srcset="imagens/cat-musica.webp" type="image/webp">
+    <source srcset="imagens/cat-musica.jpg" type="image/jpeg">
+    <img src="imagens/cat-musica.jpg" alt="Música" loading="lazy">
+</picture>
                     <div class="card-content"><h3>Música</h3></div>
                     
                 </a>
                 <a href="categorias/fotografia.html" class="categoria-card">
-                    <img src="imagens/cat-fotografia.jpg" alt="Fotografia">
+                    <picture>
+    <source srcset="imagens/cat-fotografia.webp" type="image/webp">
+    <source srcset="imagens/cat-fotografia.jpg" type="image/jpeg">
+    <img src="imagens/cat-fotografia.jpg" alt="Fotografia" loading="lazy">
+</picture>
                     <div class="card-content"><h3>Fotografia</h3></div>
                     
                 </a>
                 <a href="categorias/espacos.html" class="categoria-card">
-                    <img src="imagens/cat-espacos.jpg" alt="Espaços">
+                    <picture>
+    <source srcset="imagens/cat-espacos.webp" type="image/webp">
+    <source srcset="imagens/cat-espacos.jpg" type="image/jpeg">
+    <img src="imagens/cat-espacos.jpg" alt="Espaços" loading="lazy">
+</picture>
                     <div class="card-content"><h3>Espaços</h3></div>
                     
                 </a>
                 <a href="categorias/vestidos.html" class="categoria-card">
-                    <img src="imagens/cat-vestidos.jpg" alt="Vestidos de Noiva">
+                    <picture>
+    <source srcset="imagens/cat-vestidos.webp" type="image/webp">
+    <source srcset="imagens/cat-vestidos.jpg" type="image/jpeg">
+    <img src="imagens/cat-vestidos.jpg" alt="Vestidos de Noiva" loading="lazy">
+</picture>
                     <div class="card-content"><h3>Vestidos de Noiva</h3></div>
                     
                 </a>
@@ -79,13 +89,6 @@
         </div>
         <p>&copy; 2025 Guia Noivas Piracicaba. Todos os direitos reservados.</p>
     </footer>
-<script>
-    const menuHamburguer = document.querySelector('.menu-hamburguer');
-    const navLinks = document.querySelector('.nav-links');
-
-    menuHamburguer.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-    });
-</script>
+<script src="/js/include-header.js" defer></script>
 </body>
 </html>

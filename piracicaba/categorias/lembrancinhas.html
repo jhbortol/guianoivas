@@ -8,17 +8,8 @@
   <link rel="stylesheet" href="../css/estilo.css">
 </head>
 <body>
-  <nav class="menu-fixo">
-    <div class="logo"><a href="../index.html"><img src="../imagens/logo.png" alt="Guia Noivas Piracicaba"></a></div>
-    <ul>
-      <li><a href="../index.html">Início</a></li>
-      <li><a href="../categorias.html">Categorias</a></li>
-      <li><a href="../sobre.html">Sobre</a></li>
-      <li><a href="../cadastro.html">Cadastro</a></li>
-      <li><a href="../contato.html">Contato</a></li>
-    </ul>
-  </nav>
-  <header class="hero" style="background-image: url('../imagens/cat-lembrancinhas.jpg');">
+  <div id="site-header"></div>
+<header class="hero" style="background-image: url('../imagens/cat-lembrancinhas.jpg');">
     <h1>Lembrancinhas de Casamento</h1>
     <p>Pequenos gestos que eternizam grandes momentos</p>
   </header>
@@ -27,7 +18,11 @@
   </section>
   <section class="fornecedores">
     <div class="card">
-      <img src="../imagens/fornecedor-arte-encanto.jpg" alt="Lembrança Arte & Encanto">
+      <picture>
+    <source srcset="../imagens/fornecedor-arte-encanto.webp" type="image/webp">
+    <source srcset="../imagens/fornecedor-arte-encanto.jpg" type="image/jpeg">
+    <img src="../imagens/fornecedor-arte-encanto.jpg" alt="Lembrança Arte & Encanto" loading="lazy">
+</picture>
       <h2>Lembrança Arte & Encanto</h2>
       <p><strong>Local:</strong> Piracicaba, SP</p>
       <p><strong>Especialidade:</strong> Lembrancinhas artesanais e personalizadas.</p>
@@ -42,13 +37,6 @@
   <footer class="rodape">
     <p>&copy; 2025 Guia Noivas Piracicaba — Todos os direitos reservados.</p>
   </footer>
-<script>
-    const menuHamburguer = document.querySelector('.menu-hamburguer');
-    const navLinks = document.querySelector('.nav-links');
-
-    menuHamburguer.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-    });
-</script>
+<script src="/js/include-header.js" defer></script>
 </body>
 </html>        

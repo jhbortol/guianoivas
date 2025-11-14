@@ -10,22 +10,8 @@
 </head>
 <body>
 
-   <nav class="menu-principal">
-        <div class="logo">
-            <a href="index.html"><img src="imagens/logo.png" alt="Guia Noivas Piracicaba Logo"></a>
-        </div>
-        <div class="menu-hamburguer">
-            <i class="fa-solid fa-bars"></i>
-        </div>
-        <ul class="nav-links">
-            <li><a href="categorias.html"><i class="fa-regular fa-clock"></i> Categorias</a></li>
-            <li><a href="contato.html"><i class="fa-solid fa-cart-shopping"></i> Contato</a></li>
-            <li><a href="cadastro.html"><i class="fa-solid fa-cloud-arrow-down"></i> Cadastro</a></li>
-            <li><a href="sobre.html"><i class="fa-solid fa-display"></i> Sobre</a></li>
-        </ul>
-    </nav>
-
-    <header class="page-header" style="background-image: url('imagens/sobre-hero.jpg');">
+    <div id="site-header"></div>
+<header class="page-header" style="background-image: url('imagens/sobre-hero.jpg');">
         <div class="page-header-overlay">
             <h1>Nossa Essência</h1>
             <p>Conectando sonhos aos melhores profissionais da região de Piracicaba.</p>
@@ -41,7 +27,11 @@
                     <p>Por isso, nossa missão é ser a ponte entre seus sonhos e os fornecedores mais qualificados e talentosos de Piracicaba e região, garantindo qualidade, profissionalismo e um toque especial que fará a diferença no seu evento.</p>
                 </div>
                 <div class="sobre-imagem">
-                    <img src="imagens/sobre-conteudo.jpg" alt="Planejamento de Casamento com Moodboard e Flores">
+                    <picture>
+    <source srcset="imagens/sobre-conteudo.webp" type="image/webp">
+    <source srcset="imagens/sobre-conteudo.jpg" type="image/jpeg">
+    <img src="imagens/sobre-conteudo.jpg" alt="Planejamento de Casamento com Moodboard e Flores" loading="lazy">
+</picture>
                 </div>
             </div>
 
@@ -77,13 +67,6 @@
         </div>
         <p>&copy; 2025 Guia Noivas Piracicaba. Todos os direitos reservados.</p>
     </footer>
-<script>
-    const menuHamburguer = document.querySelector('.menu-hamburguer');
-    const navLinks = document.querySelector('.nav-links');
-
-    menuHamburguer.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-    });
-</script>
+<script src="/js/include-header.js" defer></script>
 </body>
 </html>

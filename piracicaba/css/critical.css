@@ -1,0 +1,132 @@
+/* Critical CSS: Above-the-fold styles for fastest rendering */
+/* Minified version inlined in <head> */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: #333;
+    background-color: #F5F5DC;
+}
+
+.container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+
+/* Menu Principal */
+.menu-principal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: rgba(245, 245, 220, 0.95);
+    border-bottom: 1px solid rgba(184, 146, 106, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.menu-principal .logo img { height: 80px; width: auto; }
+
+.menu-principal .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.menu-principal .nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 400;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.menu-principal .nav-links a:hover { color: #8B1E3F; }
+
+.menu-hamburguer {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: #333;
+    padding: 10px;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding-bottom: 50px;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 80px 20px;
+}
+
+.hero-section h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4.5em;
+    margin-bottom: 10px;
+    color: #F5F5DC;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+    letter-spacing: 2px;
+}
+
+.hero-section p {
+    font-size: 1.5em;
+    color: #F5F5DC;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+    max-width: 800px;
+}
+
+/* Responsive Hamburger */
+@media (max-width: 768px) {
+    .menu-hamburguer { display: block; }
+    .menu-principal .nav-links {
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(245, 245, 220, 0.98);
+        gap: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        padding: 0;
+    }
+    .menu-principal .nav-links.active {
+        max-height: 500px;
+        padding: 20px;
+    }
+    .menu-principal .nav-links li {
+        width: 100%;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(184, 146, 106, 0.2);
+    }
+    .menu-principal .nav-links a { font-size: 1em; }
+    .menu-principal { padding: 15px 20px; }
+    .hero-section h1 { font-size: 2.5em; }
+    .hero-section p { font-size: 1.1em; }
+}
