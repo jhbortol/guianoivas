@@ -1,0 +1,8 @@
+# Netlify configuration: publish the static site from the `piracicaba` directory
+[build]
+  publish = "piracicaba"
+  command = ""
+
+# Optional context for branch-specific settings
+[context.dev-hb]
+  environment = { }
