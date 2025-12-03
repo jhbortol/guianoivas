@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en" data-beasties-container>
+<head>
+  <!-- GitHub Pages SPA redirect handler -->
+  <script>
+    (function() {
+      var redirect = sessionStorage.redirect;
+      delete sessionStorage.redirect;
+      if (redirect && redirect !== location.href) {
+        history.replaceState(null, null, redirect);
+      }
+    })();
+  </script>
+  <!-- Performance resource hints -->
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+  <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
+  <!-- Optional: add font preconnects if custom webfonts introduced later -->
+  <style>
+    /* Critical CSS (above-the-fold simplificado) */
+    html,body{height:100%;margin:0;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;}
+    body{background-color:#fff;color:#1f2937;}
+    /* Reserve space for fixed navbar to prevent initial layout shift */
+    body{padding-top:80px;}
+    .container{max-width:1200px;margin-left:auto;margin-right:auto;}
+    h1,h2,h3{font-family:'Playfair Display',serif;font-weight:700;}
+    .animate-pulse{animation:pulse 1.5s ease-in-out infinite;}@keyframes pulse{0%,100%{opacity:.9}50%{opacity:.4}}
+    /* Layout stability additions */
+    .navbar-fixed{min-height:80px;}
+    /* Stabilize navbar layout: explicit height, alignment, containment to avoid shifts */
+    .navbar-fixed{height:80px;display:flex;align-items:center;contain:layout paint;}
+    .navbar-fixed a{line-height:1;}
+    .navbar-brand{display:flex;align-items:center;gap:0.5rem;}
+    .navbar-menu{display:flex;align-items:center;gap:2rem;}
+    .navbar-menu a{line-height:1.25rem;}
+    .hero-wrapper{min-height:400px;}
+    .hero-search-block{min-height:72px;}
+    .search-input{height:56px;line-height:56px;}
+    .hero-results-slot{min-height:0;}
+    .hero-results-slot.has-results{min-height:320px;}
+    .hero-results-panel{position:absolute;inset:0;left:50%;transform:translateX(-50%);max-width:960px;width:100%;transition:opacity .25s ease;}
+    .hero-title{line-height:1.1;}
+    .hero-subtitle{line-height:1.2;}
+    .hero-bg{background:#7f1d1d url('https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=60') center/cover no-repeat;opacity:.4;}
+    .destaques-grid{min-height:450px;}
+    .categorias-grid{min-height:450px;}
+    .footer-stable{min-height:220px;}
+    .footer-stable{contain:layout paint;content-visibility:auto;contain-intrinsic-size:220px;}
+    /* Avoid image shifting */
+    img{display:block;}
+    /* Category cards fixed height to align skeleton vs final */
+    .cat-card,.cat-card-skeleton{height:200px;display:flex;flex-direction:column;}
+    .cat-card .img-wrap,.cat-card-skeleton .img-wrap{height:128px;flex:0 0 auto;}
+    .cat-card .text-wrap,.cat-card-skeleton .text-wrap{flex:1 1 auto;display:flex;flex-direction:column;justify-content:flex-start;}
+      /* Navbar skeleton styling */
+      #nav-skeleton{position:fixed;top:0;left:0;width:100%;height:80px;display:flex;align-items:center;z-index:49;background:#ffffff;border-bottom:1px solid #e5e7eb;font-family:'Playfair Display',serif;}
+      #nav-skeleton .inner{width:100%;max-width:1200px;margin:0 auto;padding:0 1rem;display:flex;align-items:center;justify-content:space-between;}
+      #nav-skeleton .logo{font-size:24px;font-weight:700;color:#be123c;display:flex;align-items:center;gap:.5rem;}
+      #nav-skeleton .menu{display:flex;gap:2rem;font-size:14px;font-weight:600;color:#6b7280;}
+      #nav-skeleton .login{background:#be123c;color:#fff;padding:.5rem 1rem;border-radius:9999px;font-weight:600;font-size:14px;}
+      /* Prevent horizontal shift from scrollbar appearance */
+      html{overflow-y:scroll;}
+  </style>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MVF5F3ZD');</script>
+  <!-- End Google Tag Manager -->
+  
+  <!-- Inline font (Playfair Display 700) to avoid late swap -->
+  <style>@font-face {font-family:'Playfair Display';font-style:normal;font-weight:700;font-display:block;src:url(data:font/woff2;base64,d09GMgABAAAAACl4ABIAAAAAP2AAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABGRlRNAAABqAAAABwAAAAcZ0rkJEdERUYAAAHEAAAAXAAAAFjQAiYcR1BPUwAAAegAAAR8AAAInAm4h8tHU1VCAAACfAAACcIAAA3g7yX/W09TLzIAAALEAAAARAAAAGB4wCzSY21hcAAAAswAAACyAAABsj2ZCcxnbHlmAAADHAAAB2gAAAjYeW1mKWhlYWQAAAewAAAAMAAAADYQ9ZJWaGhlYQAAB9wAAAAeAAAAJAgEAw5obXR4AAAICAAAACAAAAAgCIAAtmxvY2EAAAg4AAAAFgAAABYF6gIObWF4cAAACGgAAAAfAAAAIAAUABxuYW1lAAAIdAAAAU4AAAJiB5kKIXBvc3QAAAlkAAAAOAAAAGCiH6xRcHJlcAAACagAAAB6AAAAhuVBK8t4nGNgYGBg4GIwYHBh4GQAASYgZgHzGAAJAwNTBh4GZgYGB6wMAAAACAAH0eJxjYGRgYOBiMIHhBQAE5gBFBkYAYhkAFgAAAHicY2BkYGA+8P8Agx4DAxMBAx4AIwEKAHicY2BkYGAAYp3dwfD/PwM78wACCAAADQAAAHicY2BkYGB2+P8Agx4DAxMBAx4AJwEKAF4AAXicY2BkYGBgZHBhYGVgYgABEMkF0BgAE+0BQwAAAHicY2BkYGAAYh0gAwMMDAwMIoIBkQSQY2BgYATCAwEWGAgB9wEAgAC8AQcAAAB4nGWQPU7DQBiF/yZjSoUE3UQXMBAPoFVLXJwcFihKHg+C7HNZPJkMkpJQQAfjwFf4Ggl7B4oC54RNOng80IYblbHvffvWmQAEPh2vHNbIp9wHItqdHG7kAbOLqtZijAZzu4uW0DLAnHk3dO+CarqFKzYJvDD3e87bTYZs9ZL2p7xxb0bWm8fP9QChpntC2lnTHaZt0wZ4a2K7R85aGvnOooxb7nJpGqJAkjFzhcblCtqFSWczx34AS0PC3bAAAAeJx1kDtOwzAQhV/zEBIAsCizoQWwFKiyhbsAWhSJGyjgOeN/btC3a0mSByDBFPAPg7AUCryVrORw9vmL//MmJP56Dk9My8krD9gnyscY3yaSh6sh0VnufCeWzznJNK7trnqcDr/jymGv4Fk9CbnTD3AxQhtZqh1PjRWUZnZmcBRVVNIpRMge63WErbGJBbcNWdI2bGOncLdZzGPYvboVGv6kRJqfI8znq1fV9xMOeoK9q63DjIIaYpgl5Q61hJcNuTeSXF8gGn6gB8jkH2QAAAHicY2BigAAuBuyAOxJQAGVmLmIAAAABAAMAAA==) format('woff2');}</style>
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W5VV70FNKL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}    gtag('js', new Date());
+    gtag('config', 'G-W5VV70FNKL');
+  </script>
+  <!-- Layout Shift Instrumentation (debug only; remove in production) -->
+  <script>
+    (function(){
+      try {
+        new PerformanceObserver((list)=>{
+          for(const entry of list.getEntries()){
+            if(!entry.hadRecentInput && entry.value > 0){
+              const targets = entry.sources?.map(s => (s.node?.tagName + (s.node?.className?'.'+s.node.className:''))) || [];
+              console.log('[CLS] shift value:', entry.value.toFixed(5), 'targets:', targets);
+            }
+          }
+        }).observe({type:'layout-shift', buffered:true});
+      } catch(e){ console.warn('Layout shift observer failed', e); }
+    })();
+  </script>
+  <!-- End Google Analytics 4 -->
+  <meta charset="utf-8">
+  <title>GuiaNoivas</title>
+  <base href="/piracicaba/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23881337'%3E%3Cpath d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/%3E%3C/svg%3E">
+<style>*,:before,:after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / .5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }*,:before,:after{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}:before,:after{--tw-content:""}html{line-height:1.5;-webkit-text-size-adjust:100%;tab-size:4;font-family:ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}iframe{display:block;vertical-align:middle}</style><link rel="stylesheet" href="styles.7ce89dd9f5359478.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles.7ce89dd9f5359478.css"></noscript></head>
+  <body>
+    <!-- Static Navbar Skeleton (will be replaced) -->
+    <nav id="nav-skeleton">
+      <div class="inner">
+        <div class="logo">Guia Noivas <span style="font-family:ui-sans-serif;font-size:18px;font-weight:400;color:#4b5563;">Piracicaba</span></div>
+        <div class="menu">
+          <span>INÍCIO</span><span>CATEGORIAS</span><span>ANUNCIE</span><span>CONTATO</span>
+          <span class="login">LOGIN NOIVAS</span>
+        </div>
+      </div>
+    </nav>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MVF5F3ZD" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <app-root></app-root>
+  <script>
+    // Remove skeleton once Angular navbar is present
+    (function(){
+      const interval = setInterval(()=>{
+        const real = document.getElementById('app-navbar');
+        const sk = document.getElementById('nav-skeleton');
+        if(real && sk){ sk.remove(); clearInterval(interval); }
+      },50);
+      setTimeout(()=>clearInterval(interval),5000);
+    })();
+  </script>
+<script src="runtime.c58ae80089d3ca52.js" type="module"></script><script src="main.1761198ecd2497db.js" type="module"></script></body>
+</html>
