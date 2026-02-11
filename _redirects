@@ -1,0 +1,5 @@
+# Sitemap dinâmico do backend
+/sitemap.xml https://guia-noivas.somee.com/api/v1/sitemap.xml 200
+
+# SPA fallback
+/*    /index.html   200
